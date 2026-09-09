@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 
 class ApiChatbot {
@@ -13,7 +14,7 @@ class ApiChatbot {
     ////new
     Map<String, String>? header = {
       "x-goog-api-key":
-          "  ",
+          dotenv.get('api-key'),
     };
 
     Map<String, String>? body = {
